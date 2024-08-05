@@ -4,7 +4,8 @@
 Este proyecto contiene scripts SQL para crear y gestionar una base de datos de una tienda en línea. Incluye la creación de tablas, inserción de datos y consultas básicas y avanzadas.
 
 ## Estructura del proyecto
-
+- `sql/`: Contiene el proyecto Online Store
+- `informacion/`: Contiene informacion para entender y aprender SQL desde cero
 
 ## Cómo usar
 1. Clona este repositorio: `git clone https://github.com/tu-usuario/sql-online-store.git`
