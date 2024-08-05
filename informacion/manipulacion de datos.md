@@ -14,6 +14,8 @@ For testers, DML queries are indispensable tools for several reasons:
 
 **4. State Updating:** Modify the state of records to simulate different system conditions.
 
+## Data Manipulation Queries
+
 ### SELECT
 
 The **SELECT** clause is used to specify the columns you want to extract from a table. You can select all columns using * or specify individual columns.
