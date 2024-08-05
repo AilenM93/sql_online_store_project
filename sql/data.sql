@@ -27,7 +27,7 @@ INSERT INTO Products (ProductID, ProductName, SupplierID, Price) VALUES
 
 INSERT INTO Orders (OrderID, CustomerID, OrderDate) VALUES
 (1, 1, '2022-03-01'),
-(2, 8, '2022-03-10'),
+(2, 3, '2022-03-10'),
 (3, 2, '2022-08-01'),
 (4, 1, '2023-05-15'),
 (5, 3, '2023-05-21'),
@@ -37,7 +37,7 @@ INSERT INTO Orders (OrderID, CustomerID, OrderDate) VALUES
 (9, 3, '2024-06-22'),
 (10, 4, '2024-07-02'),
 (11, 3, '2024-07-30'),
-(12, 7, '2024-08-01'),
+(12, 3, '2024-08-01'),
 (13, 6, '2024-08-01');
 
 INSERT INTO OrderDetails (OrderDetailID, OrderID, ProductID, Quantity) VALUES
