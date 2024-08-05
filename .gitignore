@@ -1,0 +1,9 @@
+# Ignore SQL dump files
+*.sql.dump
+*.sql.bak
+
+# Ignore SQL log files
+*.log
+
+# Ignore any other temporary files
+*.tmp
