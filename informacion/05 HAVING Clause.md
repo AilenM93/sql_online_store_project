@@ -19,3 +19,22 @@ SELECT column1, AGGREGATE_FUNCTION(column2)
 FROM table_name
 GROUP BY column1
 HAVING condition;
+```
+
+## Difference between WHERE and HAVING
+
+- WHERE: Filters rows before applying aggregate functions.
+
+```sql
+SELECT * FROM Orders
+WHERE OrderDate > '2024-01-01';
+```
+
+- HAVING: Filters results after aggregate functions have been applied.
+
+```sql
+SELECT CustomerID, COUNT(*) AS OrderCount
+FROM Orders
+GROUP BY CustomerID
+HAVING COUNT(*) > 1;
+```
