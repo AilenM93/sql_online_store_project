@@ -56,3 +56,65 @@ WHERE NOT condition;
 # WHERE and other SQL Clauses
 
 Using WHERE with other SQL clauses such as BETWEEN, IN, LIKE, IS NULL, and IS NOT NULL is essential in SQL for filtering data in queries.
+
+## BETWEEN
+
+The BETWEEN clause is used within a WHERE clause to filter records that are within a specific range. The range can be numbers, text, or dates.
+
+```sql
+SELECT column1, column2, ...
+FROM table_name
+WHERE column_name BETWEEN value1 AND value2;
+```
+
+## IN
+
+The IN clause is used within a WHERE clause to filter records that match any of the values ​​in a specified list. It is useful for avoiding multiple OR conditions.
+
+```sql
+SELECT column1, column2, ...
+FROM table_name
+WHERE column_name IN (value1, value2, ...);
+```
+
+Example:
+
+```sql
+SELECT * FROM Customers
+WHERE Country IN ('Argentina', 'Brasil', 'Spain');
+```
+
+## LIKE
+
+The LIKE clause is used within a WHERE clause to filter records that match a specified pattern. Patterns can include wildcard characters (% and _).
+
+```sql
+SELECT column1, column2, ...
+FROM table_name
+WHERE column_name LIKE pattern;
+```
+
+In this example, all customers whose names begin with 'L' are selected.
+
+```sql
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'L%';
+```
+
+## IS NULL / IS NOT NULL
+
+The IS NULL and IS NOT NULL clauses are used within a WHERE clause to filter records that have NULL or non-NULL values, respectively.
+
+```sql
+SELECT column1, column2, ...
+FROM table_name
+WHERE column_name IS NULL;
+```
+
+```sql
+SELECT column1, column2, ...
+FROM table_name
+WHERE column_name IS NOT NULL;
+```
+
+
