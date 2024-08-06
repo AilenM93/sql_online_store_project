@@ -5,7 +5,7 @@ This project contains SQL scripts to create and manage an online store database.
 
 ## Project structure
 - `sql/`: Contains the Online Store project
-- `SQL from scratch/`: Contains information to understand and learn SQL from scratch
+- `informacion/`: Contains information to understand and learn SQL from scratch
 - `testdome test/`: Contains the answers to the free exercises on the Testdome platform
 
 ## How to use
