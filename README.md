@@ -1,20 +1,22 @@
 # SQL Online Store
 
-## Descripción
-Este proyecto contiene scripts SQL para crear y gestionar una base de datos de una tienda en línea. Incluye la creación de tablas, inserción de datos y consultas básicas y avanzadas.
+## Description
+This project contains SQL scripts to create and manage an online store database. It includes table creation, data insertion, and basic and advanced queries.
 
-## Estructura del proyecto
-- `sql/`: Contiene el proyecto Online Store
-- `informacion/`: Contiene informacion para entender y aprender SQL desde cero
+## Project structure
+- `sql/`: Contains the Online Store project
+- `SQL from scratch/`: Contains information to understand and learn SQL from scratch
+- `testdome test/`: Contains the answers to the free exercises on the Testdome platform
 
-## Cómo usar
-1. Clona este repositorio: `git clone https://github.com/AilenM93/sql-online-store-project.git`
-2. Navega a la carpeta `sql/`
-3. Ejecuta los scripts en tu gestor de base de datos SQL.
+## How to use
+1. Clone this repository: `git clone https://github.com/AilenM93/sql-online-store-project.git`
+2. Navigate to the `sql/` folder
+3. Run the scripts in your SQL database manager.
 
 ## Scripts
-- `tables.sql`: Crea las tablas de la base de datos.
-- `data.sql`: Inserta datos de ejemplo en las tablas.
-- `queries/basics.sql`: Contiene consultas SQL básicas.
-- `queries/advanced.sql`: Contiene consultas SQL avanzadas.
-
+- `tables.sql`: Creates the database tables.
+- `data.sql`: Inserts sample data into the tables.
+- `functions.sql`: Contains the definition of SQL functions to reuse code.
+- `queries/basics.sql`: Contains basic SQL queries.
+- `queries/advanced.sql`: Contains advanced SQL queries.
+- `queries/views.sql`: Contains the definition of views to simplify access to specific data.
