@@ -42,4 +42,61 @@ Employees can have multiple sales. A region with no sales should be also returne
 
 # Answer
 
+**Step by step:**
+
+1. Get total sales and number of employees by region:
+
+- Combine `regions`, `states`, `employees`, and `sales` to get total sales by region.
+- Count the number of employees by region.
+
+2. Calculate average sales per employee for each region:
+
+- Use the sum of sales and number of employees obtained in step 1.
+
+3. Find the region with the highest average sales:
+
+- Calculate the maximum of the average sales per region.
+
+4. Calculate the difference between the highest average and the average for each region:
+
+- Subtract the average for each region from the highest average.
+
+```sql
+WITH RegionSales AS (
+    SELECT
+        r.id AS regionId,
+        r.name AS regionName,
+        SUM(s.amount) AS totalSales,
+        COUNT(DISTINCT e.id) AS numberOfEmployees
+    FROM
+        regions r
+        LEFT JOIN states st ON r.id = st.regionId
+        LEFT JOIN employees e ON st.id = e.stateId
+        LEFT JOIN sales s ON e.id = s.employeeId
+    GROUP BY
+        r.id, r.name
+),
+RegionAvgSales AS (
+    SELECT
+        regionId,
+        regionName,
+        COALESCE(totalSales / NULLIF(numberOfEmployees, 0), 0) AS avgSalesPerEmployee
+    FROM
+        RegionSales
+),
+MaxAvgSales AS (
+    SELECT
+        MAX(avgSalesPerEmployee) AS highestAvgSales
+    FROM
+        RegionAvgSales
+)
+SELECT
+    ras.regionName,
+    ras.avgSalesPerEmployee,
+    COALESCE(mas.highestAvgSales - ras.avgSalesPerEmployee, 0) AS salesDifference
+FROM
+    RegionAvgSales ras,
+    MaxAvgSales mas;
+```
+
 
